@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "799230677695-dpjrmrlps7b5omv9l6q0fg6quis006pt.apps.googleusercontent.com",
+          "client_id": "799230677695-nrrd1b0r142ufe7jppm0hm4us2k4dfl0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.harsh082ip.conversehub.converse_hub",
+            "certificate_hash": "a5758a3c456cc01c2328c462867f6fe7e80d33c7"
+          }
+        },
+        {
+          "client_id": "799230677695-un24j0bu9av0bpu1fu6eq4u0dge96q6l.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -29,6 +37,13 @@
             {
               "client_id": "799230677695-dpjrmrlps7b5omv9l6q0fg6quis006pt.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "799230677695-dchnnnkdd21h29f7vh866t4h49ga6o1v.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.harsh082ip.conversehub.converseHub"
+              }
             }
           ]
         }

@@ -63,6 +63,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '799230677695',
     projectId: 'converse-hub',
     storageBucket: 'converse-hub.appspot.com',
+    androidClientId: '799230677695-nrrd1b0r142ufe7jppm0hm4us2k4dfl0.apps.googleusercontent.com',
     iosClientId: '799230677695-dchnnnkdd21h29f7vh866t4h49ga6o1v.apps.googleusercontent.com',
     iosBundleId: 'com.harsh082ip.conversehub.converseHub',
   );
