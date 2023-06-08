@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "799230677695",
+    "project_id": "converse-hub",
+    "storage_bucket": "converse-hub.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:799230677695:android:46f72f59e12788f3feac0a",
+        "android_client_info": {
+          "package_name": "com.harsh082ip.conversehub.converse_hub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "799230677695-dpjrmrlps7b5omv9l6q0fg6quis006pt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCA9qEMy4BYkyF4YGvUddMUTC7LTRHlS48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "799230677695-dpjrmrlps7b5omv9l6q0fg6quis006pt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

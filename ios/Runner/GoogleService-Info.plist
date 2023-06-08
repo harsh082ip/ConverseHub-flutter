@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>799230677695-dchnnnkdd21h29f7vh866t4h49ga6o1v.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.799230677695-dchnnnkdd21h29f7vh866t4h49ga6o1v</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAP9h3alas0n-mE5CaGrZ4YHg7Eb9sDGw4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>799230677695</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.harsh082ip.conversehub.converseHub</string>
+	<key>PROJECT_ID</key>
+	<string>converse-hub</string>
+	<key>STORAGE_BUCKET</key>
+	<string>converse-hub.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:799230677695:ios:7a4e18cf11654ad2feac0a</string>
+</dict>
+</plist>
