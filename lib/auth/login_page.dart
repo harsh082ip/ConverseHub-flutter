@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:math';
 
 import 'package:animate_do/animate_do.dart';
+import 'package:converse_hub/APIs/api.dart';
 import 'package:converse_hub/main.dart';
 import 'package:converse_hub/utils/dialogs.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -45,7 +46,7 @@ class _LoginPageState extends State<LoginPage> {
       );
 
       // Once signed in, return the UserCredential
-      return await FirebaseAuth.instance.signInWithCredential(credential);
+      return await APIs.auth.signInWithCredential(credential);
     } catch (e) {
       Dialogs.showSnackbar(
           context, 'Some went wrong, CHECK your Internet Connection!');
