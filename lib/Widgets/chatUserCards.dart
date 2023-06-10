@@ -1,11 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../Models/chat_users.dart';
 import '../constants/consts.dart';
 import '../main.dart';
 
 class ChatUserCards extends StatefulWidget {
-  const ChatUserCards({super.key});
+  final ChatUsers users;
+  const ChatUserCards({super.key, required this.users});
 
   @override
   State<ChatUserCards> createState() => _ChatUserCardsState();
@@ -24,15 +26,15 @@ class _ChatUserCardsState extends State<ChatUserCards> {
         onTap: () {
           print('cards button pressed');
         },
-        child: const ListTile(
+        child: ListTile(
           leading: CircleAvatar(
             child: Icon(CupertinoIcons.person),
           ),
           title: Text(
-            'Demo User',
+            widget.users.name,
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
-          subtitle: Text('Last seen a min ago'),
+          subtitle: Text(widget.users.about),
           trailing: Text(
             '12:00 am',
             style: TextStyle(fontSize: 12.0),

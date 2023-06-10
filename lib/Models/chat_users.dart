@@ -1,3 +1,5 @@
+// website used to convert => https://www.jsontodart.in/
+
 class ChatUsers {
   ChatUsers({
     required this.image,
@@ -20,18 +22,20 @@ class ChatUsers {
   late final String email;
   late final String pushToken;
 
+  // from Json to dart
   ChatUsers.fromJson(Map<String, dynamic> json) {
-    image = json['image'];
-    name = json['name'];
-    about = json['about'];
-    createdAt = json['created_at'];
-    isOnline = json['is_online'];
-    id = json['id'];
-    last_active = json['last active'];
-    email = json['email'];
-    pushToken = json['push_token'];
+    image = json['image'] ?? '';
+    name = json['name'] ?? '';
+    about = json['about'] ?? '';
+    createdAt = json['created_at'] ?? '';
+    isOnline = json['is_online'] ?? '';
+    id = json['id'] ?? '';
+    last_active = json['last active'] ?? '';
+    email = json['email'] ?? '';
+    pushToken = json['push_token'] ?? '';
   }
 
+  // from dart to Json
   Map<String, dynamic> toJson() {
     final data = <String, dynamic>{};
     data['image'] = image;
