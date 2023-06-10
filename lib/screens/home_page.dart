@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:math';
 
 import 'package:converse_hub/APIs/api.dart';
@@ -45,10 +46,12 @@ class _HomePageState extends State<HomePage> {
           // reading and building from the data getting from firestore cloud
           stream: APIs.firestore.collection('users').snapshots(),
           builder: (context, snapshot) {
+            final list = [];
             if (snapshot.hasData) {
               final data = snapshot.data?.docs;
               for (var i in data!) {
-                print('Data: ${i.data()}');
+                print('Data: ${jsonEncode(i.data())}');
+                list.add(i.data()['name']);
               }
             }
             return ListView.builder(
