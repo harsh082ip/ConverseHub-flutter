@@ -20,10 +20,16 @@ class LoginPage extends StatefulWidget {
 class _LoginPageState extends State<LoginPage> {
   _onGoogleBtnClick() {
     Dialogs.progressBar(context);
-    _signInWithGoogle().then((user) {
+    _signInWithGoogle().then((user) async {
       Navigator.pop(context);
       if (user != null) {
-        Navigator.pushReplacementNamed(context, '/home');
+        if ((await APIs.userExists())) {
+          Navigator.pushReplacementNamed(context, '/home');
+        } else {
+          await APIs.createUser().then((value) {
+            Navigator.pushReplacementNamed(context, '/home');
+          });
+        }
       }
     });
   }
