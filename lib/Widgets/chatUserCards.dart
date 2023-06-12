@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -27,8 +28,18 @@ class _ChatUserCardsState extends State<ChatUserCards> {
           print('cards button pressed');
         },
         child: ListTile(
-          leading: CircleAvatar(
-            child: Icon(CupertinoIcons.person),
+          // leading: CircleAvatar(
+          //   child: Icon(CupertinoIcons.person),
+          // ),
+          leading: ClipRRect(
+            borderRadius: BorderRadius.circular(mq.height * 0.3),
+            child: CachedNetworkImage(
+              // width: mq.height * 0.55,
+              // height: mq.height * 0.55,
+              imageUrl: widget.users.image,
+              placeholder: (context, url) => CircularProgressIndicator(),
+              errorWidget: (context, url, error) => Icon(CupertinoIcons.person),
+            ),
           ),
           title: Text(
             widget.users.name,

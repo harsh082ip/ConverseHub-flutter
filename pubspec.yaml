@@ -37,10 +37,14 @@ dependencies:
   cupertino_icons: ^1.0.2
   animate_do: ^3.0.2
   firebase_core: ^2.13.1
-  google_fonts: ^5.0.0
+  # Downgraded version of google fonts from 5.0.0 to 4.0.0 to resolve conflicts between this and cached_network_image
+  google_fonts: ^4.0.0
   firebase_auth: ^4.6.2
   google_sign_in: ^6.1.4
   cloud_firestore: ^4.8.0
+  cached_network_image: ^3.2.3
+
+  
 
 dev_dependencies:
   flutter_test:
