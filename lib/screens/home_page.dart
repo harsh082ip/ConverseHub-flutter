@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:converse_hub/APIs/api.dart';
 import 'package:converse_hub/Models/chat_users.dart';
 import 'package:converse_hub/main.dart';
+import 'package:converse_hub/screens/profile_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +35,14 @@ class _HomePageState extends State<HomePage> {
               },
               icon: Icon(Icons.search)),
           //search vertical dot iconButton
-          IconButton(onPressed: () {}, icon: Icon(Icons.more_vert)),
+          IconButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (_) => ProfileScreen(users: list[0])));
+              },
+              icon: Icon(Icons.more_vert)),
         ],
       ),
       floatingActionButton: FloatingActionButton(

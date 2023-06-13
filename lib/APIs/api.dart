@@ -25,7 +25,7 @@ class APIs {
     final chatUser = ChatUsers(
         image: user.photoURL.toString(),
         name: user.displayName.toString(),
-        about: 'Hey, I am using We Converse Hub',
+        about: 'Hey there, I am using Converse Hub',
         createdAt: time,
         isOnline: false,
         id: user.uid,
