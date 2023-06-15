@@ -13,6 +13,9 @@ class APIs {
   // returning current user
   static User get user => auth.currentUser!;
 
+  // for string self info
+  static late ChatUsers me;
+
   // for checking if a user exist or not
   static Future<bool> userExists() async {
     return (await firestore.collection('users').doc(user.uid).get()).exists;
@@ -45,5 +48,16 @@ class APIs {
         .collection('users')
         .where('id', isNotEqualTo: user.uid)
         .snapshots();
+  }
+
+  // for getting current user info
+  static Future<void> getSelfInfo() async {
+    await firestore.collection('users').doc(user.uid).get().then((user) async {
+      if (user.exists) {
+        me = ChatUsers.fromJson(user.data()!);
+      } else {
+        await createUser().then((value) => getSelfInfo());
+      }
+    });
   }
 }
