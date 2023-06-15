@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
       ),
       body: StreamBuilder(
         // reading and building from the data getting from firestore cloud
-        stream: APIs.firestore.collection('users').snapshots(),
+        stream: APIs.getAllusers(),
         builder: (context, snapshot) {
           switch (snapshot.connectionState) {
             case ConnectionState.waiting:

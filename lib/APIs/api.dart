@@ -38,4 +38,12 @@ class APIs {
         .doc(user.uid)
         .set(chatUser.toJson());
   }
+
+  // get all the users from firestore database to show up on home page
+  static Stream<QuerySnapshot<Map<String, dynamic>>> getAllusers() {
+    return APIs.firestore
+        .collection('users')
+        .where('id', isNotEqualTo: user.uid)
+        .snapshots();
+  }
 }
